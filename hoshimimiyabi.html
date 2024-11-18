@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoshimi Miyabi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* background: linear-gradient(135deg, #e0eaff, #f0f2f5); */
+            background-image: url(./city-futuristic-retro-8k-uz-2560x1440.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        fieldset {
+            width: 350px;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+        }
+        fieldset::before, fieldset::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.1);
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+        fieldset::before {
+            top: -100px;
+            left: -100px;
+        }
+        fieldset::after {
+            bottom: -100px;
+            right: -100px;
+        }
+
+        /* animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+        }
+        /* Hover effect */
+        fieldset:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        legend {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1d3547;
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-bottom: 3px solid #1d3547;
+            border-radius: 8px;
+        }
+        img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-top: 15px;
+            text-align: justify;
+            color: #333;
+        }
+
+        .decorative-line {
+            width: 50px;
+            height: 5px;
+            background: linear-gradient(90deg, #ff3300, #00c6ff);
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        /* Responsive Adjustment, If need it :v */
+        @media (max-width: 768px) {
+            fieldset {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Hoshimi Miyabi</legend>
+        <div class="decorative-line"></div>
+        <img src="hoshimi-miyabi.png">
+        <p>Hoshimi Miyabi</p>
+        <p>Hoshimi Miyabi is the head of Hollow Special Operations Section 6, and the successor of a renowned martial art family in New Eridu. With her strong sense of responsibility towards guarding the principles and order within New Eridu, Miyabi aspires to build an unbreakable city management system... and to own a sizable collection of swords (her own words).</p>
+    </fieldset>
+</body>
+</html>
